@@ -25,24 +25,33 @@ groups = [
 "https://t.me/mehribonlariiiim_0277",
 "https://t.me/notkrug_chat",
 "https://t.me/xorazm_telefon_bozor_group",
-    "https://t.me/dil_tabriklari",
-    'https://t.me/Navoiy_telefonn_bozor'
+"https://t.me/dil_tabriklari",
+"https://t.me/Navoiy_telefonn_bozor"
 ]
+
+message = """
+• Bizga Kuniga 10 Tadan 1000 Tagacha Ovoz Yeg'a Oladiganlar Kerak
+
+• Ovozlarni Maximal Darajada Qimmat Olishga Harakat Qilamiz
+
+• Bizning Jamoaga Qo'shiling
+
+Narxlar kundan kunga ko'tarilib boradi.
+Eng baland va ishonchli kanal.
+
+Isbotlar profilda
+"""
 
 async def main():
     while True:
         for g in groups:
-            await client.send_message(g, "•  Bizga Kuniga 10 Tadan 1000 Tagacha Ovoz Yeg'a Oladiganlar Kerak
-•  Ovozlarni Maximal Darajada Qimmat Olishga Harakat Qilamiz
-•  Bizning Jamoaga Qo'shiling 
+            try:
+                await client.send_message(g, message)
+                print("Yuborildi:", g)
+            except Exception as e:
+                print("Xato:", g, e)
 
-Narxlar:
-Kundan kunga koʻtarilib boradi.
-
-Eng baland va ishonchli kanal.
-
-Isbotlar profilda")
-        await asyncio.sleep(600)
+        await asyncio.sleep(600)  # 10 minut kutadi
 
 with client:
     client.loop.run_until_complete(main())
