@@ -4,29 +4,28 @@ import asyncio
 api_id = 35158970
 api_hash = "7bfec4703a3d652c7becf1e72cdb2d07"
 
-client = TelegramClient('session', api_id, api_hash)
+client = TelegramClient("session", api_id, api_hash)
 
 groups = [
-"https://t.me/Xorazmtelefon_bozori_N1",
-"https://t.me/buxoro_telefon_bozori_bukhara",
-"https://t.me/Andijon_Fargona_Namangan7",
-"https://t.me/BUXORO_TELEFON_BOZORI_3",
-"https://t.me/Qarshi_telefon_bozori",
-"https://t.me/telfon_bozori_qarshi",
-"https://t.me/Qarshi_Telefon_Bozori1",
-"https://t.me/Qarshi_Telefon_bozor_Qashqadaryo",
-"https://t.me/qarshi_telefon_qashqadaryo_bozor",
-"https://t.me/gulobod_navoi_chat",
-"https://t.me/Qarshi_telefon_bozorin1",
-"https://t.me/fargona_margilon_telefon_bozorN1",
-"https://t.me/telfon_bozori_qarshi",
-"https://t.me/Guruppalar_qiziqarli",
-"https://t.me/Tanishuv_Dostlarr_Sevishganlar",
-"https://t.me/mehribonlariiiim_0277",
-"https://t.me/notkrug_chat",
-"https://t.me/xorazm_telefon_bozor_group",
-"https://t.me/dil_tabriklari",
-"https://t.me/Navoiy_telefonn_bozor"
+    "https://t.me/Xorazmtelefon_bozori_N1",
+    "https://t.me/buxoro_telefon_bozori_bukhara",
+    "https://t.me/Andijon_Fargona_Namangan7",
+    "https://t.me/BUXORO_TELEFON_BOZORI_3",
+    "https://t.me/Qarshi_telefon_bozori",
+    "https://t.me/telfon_bozori_qarshi",
+    "https://t.me/Qarshi_Telefon_Bozori1",
+    "https://t.me/Qarshi_Telefon_bozor_Qashqadaryo",
+    "https://t.me/qarshi_telefon_qashqadaryo_bozor",
+    "https://t.me/gulobod_navoi_chat",
+    "https://t.me/Qarshi_telefon_bozorin1",
+    "https://t.me/fargona_margilon_telefon_bozorN1",
+    "https://t.me/Guruppalar_qiziqarli",
+    "https://t.me/Tanishuv_Dostlarr_Sevishganlar",
+    "https://t.me/mehribonlariiiim_0277",
+    "https://t.me/notkrug_chat",
+    "https://t.me/xorazm_telefon_bozor_group",
+    "https://t.me/dil_tabriklari",
+    "https://t.me/Navoiy_telefonn_bozor"
 ]
 
 message = """
@@ -48,10 +47,11 @@ async def main():
             try:
                 await client.send_message(g, message)
                 print("Yuborildi:", g)
+                await asyncio.sleep(5)   # har guruh orasida 5 sekund
             except Exception as e:
-                print("Xato:", g, e)
+                print("Yuborilmadi:", g, e)
 
-        await asyncio.sleep(600)  # 10 minut kutadi
+        await asyncio.sleep(500)  # 10 minutdan keyin yana aylana
 
 with client:
     client.loop.run_until_complete(main())
