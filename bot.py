@@ -7,15 +7,42 @@ api_hash = "7bfec4703a3d652c7becf1e72cdb2d07"
 client = TelegramClient('session', api_id, api_hash)
 
 groups = [
-    'https://t.me/open_budjet_uz_jamoasi',
+"https://t.me/Xorazmtelefon_bozori_N1",
+"https://t.me/buxoro_telefon_bozori_bukhara",
+"https://t.me/Andijon_Fargona_Namangan7",
+"https://t.me/BUXORO_TELEFON_BOZORI_3",
+"https://t.me/Qarshi_telefon_bozori",
+"https://t.me/telfon_bozori_qarshi",
+"https://t.me/Qarshi_Telefon_Bozori1",
+"https://t.me/Qarshi_Telefon_bozor_Qashqadaryo",
+"https://t.me/qarshi_telefon_qashqadaryo_bozor",
+"https://t.me/gulobod_navoi_chat",
+"https://t.me/Qarshi_telefon_bozorin1",
+"https://t.me/fargona_margilon_telefon_bozorN1",
+"https://t.me/telfon_bozori_qarshi",
+"https://t.me/Guruppalar_qiziqarli",
+"https://t.me/Tanishuv_Dostlarr_Sevishganlar",
+"https://t.me/mehribonlariiiim_0277",
+"https://t.me/notkrug_chat",
+"https://t.me/xorazm_telefon_bozor_group",
+    "https://t.me/dil_tabriklari",
     'https://t.me/Navoiy_telefonn_bozor'
 ]
 
 async def main():
     while True:
         for g in groups:
-            await client.send_message(g, "Salom")
-        await asyncio.sleep(300)
+            await client.send_message(g, "•  Bizga Kuniga 10 Tadan 1000 Tagacha Ovoz Yeg'a Oladiganlar Kerak
+•  Ovozlarni Maximal Darajada Qimmat Olishga Harakat Qilamiz
+•  Bizning Jamoaga Qo'shiling 
+
+Narxlar:
+Kundan kunga koʻtarilib boradi.
+
+Eng baland va ishonchli kanal.
+
+Isbotlar profilda")
+        await asyncio.sleep(600)
 
 with client:
     client.loop.run_until_complete(main())
